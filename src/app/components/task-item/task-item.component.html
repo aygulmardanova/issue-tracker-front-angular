@@ -1,0 +1,5 @@
+<!--{{item.name}}-->
+<a [routerLink]="['/details', item.id]" [id]="item.id">{{item.name}}</a>
+<button id="remove-btn" class="btn-primary remove-btn" (click)="onRemove()">&#120;</button>
+<button *ngIf="!isLast" id="down-btn" class="btn-primary up-down-btn" (click)="onMoveDown()">&#8595;</button>
+<button *ngIf="!isFirst" id="up-btn" class="btn-primary up-down-btn" (click)="onMoveUp()">&#8593;</button>

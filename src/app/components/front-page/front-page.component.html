@@ -1,0 +1,6 @@
+<div>
+<!--  <a routerLink="/details">Go to Details</a>-->
+  <p *ngFor="let item of items">
+    <a [routerLink]="['/details', item.id]">{{item.name}}</a>
+  </p>
+</div>

@@ -1,0 +1,4 @@
+FormData:
+<input type="file" [disabled]="loading" (change)="onUpload($event)">
+<p *ngIf="loading">Uploading is in progress...</p>
+<img *ngIf="preview && !loading" [src]="preview">

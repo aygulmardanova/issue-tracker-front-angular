@@ -1,0 +1,18 @@
+<form #addForm="ngForm" (submit)="onAdd($event)" class="add-form">
+  <input required [(ngModel)]="name" name="name">
+  <button class="add-btn">Add</button>
+</form>
+
+<!--<app-form-data-uploader></app-form-data-uploader>-->
+<!--<app-array-buffer-uploader></app-array-buffer-uploader>-->
+
+<p *ngIf="items.length === 0">Please, add some tasks!</p>
+
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    <app-task-item [item]="item" [ind]="i" [isFirst]="i === 0" [isLast]="i === items.length - 1"
+                   (remove)="onRemoveItem($event)"
+                   (down)="onMoveItemDown($event)"
+                   (up)="onMoveItemUp($event)"></app-task-item>
+  </li>
+</ul>

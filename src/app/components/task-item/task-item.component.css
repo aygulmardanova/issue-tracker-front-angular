@@ -1,0 +1,12 @@
+button {
+  border-radius: 5px;
+  float: right;
+}
+
+.remove-btn {
+  background-color: red;
+}
+
+.up-down-btn {
+  background-color: limegreen;
+}
